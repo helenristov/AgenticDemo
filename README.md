@@ -144,7 +144,7 @@ At a high level, the solution consists of:
 ## Repository Structure
 
 call-center-ai-demo/
-│
+```
 ├── backend/
 │ ├── app/
 │ │ ├── main.py # FastAPI entrypoint
@@ -163,8 +163,7 @@ call-center-ai-demo/
 │
 ├── .env.example # Environment variable template
 └── README.md
-
-
+```
 ---
 
 ## Running the Demo Locally
@@ -182,8 +181,9 @@ Verify:
 http://localhost:8000/docs
 
 http://localhost:8000/openapi.json
-
-Frontend
+```
+### Frontend
+```
 cd frontend
 streamlit run streamlit_app.py
 Environment Variables
@@ -192,4 +192,13 @@ Example .env:
 OPENAI_API_KEY=your_key_here
 OPENAI_MODEL=gpt-4o-mini
 (For Azure OpenAI, additional endpoint and deployment variables are required.)
+```
+---
+### Future Extensions
+
+- Replace mock tools with real mainframe / FHIR integrations
+- Add guardrails (PHI redaction, classification)
+- Introduce event-driven orchestration
+- Expand CRM integration (case creation, summaries)
+- Add cost and latency telemetry
 
